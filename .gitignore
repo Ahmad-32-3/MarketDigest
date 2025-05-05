@@ -1,33 +1,45 @@
-# ─── Python artifacts ─────────────────────────────────────────
-__pycache__/
-*.py[cod]
-*.so
-
-# ─── Virtual env ─────────────────────────────────────────────
+# ── Python virtual envs ─────────────────────────────────────────
 .venv/
 venv/
+ENV/
 env/
+__pycache__/
+*.py[cod]
+*$py.class
 
-# ─── IDE / editor ────────────────────────────────────────────
+# ── IDE / editor folders ────────────────────────────────────────
 .vscode/
-*.code-workspace
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# ─── ChromeDriver binaries (if you don’t want them in Git) ───
-chromedriver.exe                 # IGNORE
-chromedriver-win64/              # IGNORE
+# ── Logs and scratch output ────────────────────────────────────
+*.log
+scrape.log
 
-# ─── FAISS index & metadata ─────────────────────────────────
-faiss_index/                     # IGNORE entire folder  
-*.faiss                          # IGNORE index files  
-faiss_meta.pkl                   # IGNORE serialized metadata
+# ── Selenium / ChromeDriver binaries ───────────────────────────
+chromedriver.exe
+chromedriver-win64/
+chromedriver-win64/*
+chromedriver-*.zip
 
-# ─── Scraped data & logs ────────────────────────────────────
-*.csv                            # IGNORE scraped CSV  
-*.jsonl                          # IGNORE JSON-L output  
-scrape.log                       # IGNORE runtime log  
+# ── Scraped data ───────────────────────────────────────────────
+*.csv
+*.json
+*.jsonl
+yahoo_finance.csv
+selenium_yahoo_finance.* 
 
-# ─── Miscellaneous ──────────────────────────────────────────
-yahoo_finance.csv                # IGNORE if this is an output  
-selenium_yahoo_finance.json      # IGNORE if this is an output  
-selenium_yahoo_finance.jsonl     # IGNORE if this is an output  
-testfile.py                      # IGNORE local experiments  
+# ── FAISS & pickle indexes ─────────────────────────────────────
+faiss_index/
+faiss_meta.pkl
+*.faiss
+index.pkl
+
+# ── Scrapy & other caches ──────────────────────────────────────
+.scrapy/
+.scrape.cfg
+
+# ── Test / temp files ──────────────────────────────────────────
+test_*.py
+*.tmp

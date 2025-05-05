@@ -5,6 +5,9 @@ MarketDigest: Daily Stock News Dashboard
 MarketDigest is a locally hosted tool that turns the latest stock news into actionable insights you can review each morning. It scrapes fresh articles from Yahoo Finance, summarizes and classifies their sentiment, and presents them in a clean dashboard. You can also ask free‑form questions about the news to get focused answers with source links. No paid APIs are required—everything runs on your machine.
 
 ---
+![image](https://github.com/user-attachments/assets/427d118f-8f9f-4dfa-b610-b9d56cbd6cbb)
+![image](https://github.com/user-attachments/assets/238e367e-95fd-4546-875f-b663265b3489)
+
 
 ## Features
 

@@ -1,0 +1,100 @@
+2025-05-04 21:09:05,964 [INFO] Starting scraper
+2025-05-04 21:09:11,773 [INFO] Navigated to https://finance.yahoo.com/news/
+2025-05-04 21:09:17,880 [INFO] Completed scrolling
+2025-05-04 21:09:17,903 [INFO] Found 40 article elements
+2025-05-04 21:09:19,424 [WARNING] Detail scrape failed for https://finance.yahoo.com/m/cc6772a9-9ce0-387a-ae9d-79f7b35e0263/dow-jones-futures-fall-.html: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=136.0.7103.49); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D24DA145+76773]
+	GetHandleVerifier [0x00007FF6D24DA1A0+76864]
+	(No symbol) [0x00007FF6D2298F7A]
+	(No symbol) [0x00007FF6D22A0978]
+	(No symbol) [0x00007FF6D22A39EC]
+	(No symbol) [0x00007FF6D22A3ABF]
+	(No symbol) [0x00007FF6D22E8F26]
+	(No symbol) [0x00007FF6D231735A]
+	(No symbol) [0x00007FF6D22E1CF6]
+	(No symbol) [0x00007FF6D2317570]
+	(No symbol) [0x00007FF6D233F0CF]
+	(No symbol) [0x00007FF6D2317133]
+	(No symbol) [0x00007FF6D22E04D1]
+	(No symbol) [0x00007FF6D22E1263]
+	GetHandleVerifier [0x00007FF6D279A8ED+2962317]
+	GetHandleVerifier [0x00007FF6D2794EC2+2939234]
+	GetHandleVerifier [0x00007FF6D27B2FF3+3062419]
+	GetHandleVerifier [0x00007FF6D24F4B9A+185914]
+	GetHandleVerifier [0x00007FF6D24FC78F+217647]
+	GetHandleVerifier [0x00007FF6D24E2A44+111844]
+	GetHandleVerifier [0x00007FF6D24E2BF2+112274]
+	GetHandleVerifier [0x00007FF6D24C8A79+5401]
+	BaseThreadInitThunk [0x00007FFB3D18E8D7+23]
+	RtlUserThreadStart [0x00007FFB3E4DC5DC+44]
+
+2025-05-04 21:09:19,550 [INFO] Scraped [1]: Dow Jones Futures Fall: Palantir Leads Earnings; Warren Buffett To Step Down As CEO
+2025-05-04 21:09:20,826 [INFO] Scraped [2]: Oil Futures Slip After OPEC+ Agrees to Increase Production
+2025-05-04 21:09:35,749 [WARNING] Detail scrape failed for https://finance.yahoo.com/research/reports/MS_0P0000063T_AnalystReport_1746304059000?yptr=yahoo&ncid=yahooproperties_plusresear_nm5q6ze1cei: 'NoneType' object has no attribute 'isoformat'
+2025-05-04 21:09:35,809 [INFO] Scraped [3]: Analyst Report: Berkshire Hathaway Inc.
+2025-05-04 21:09:37,398 [INFO] Scraped [4]: Gold Edges Higher Amid Losses in U.S. Stock Futures
+2025-05-04 21:09:39,439 [INFO] Scraped [5]: Was Jim Cramer Right About DuPont de Nemours (DD)?
+2025-05-04 21:09:41,368 [INFO] Scraped [6]: Was Jim Cramer Right About Alphabet Inc. (GOOGL)?
+2025-05-04 21:09:43,353 [INFO] Scraped [7]: Was Jim Cramer Right About Microsoft (MSFT)?
+2025-05-04 21:09:45,308 [INFO] Scraped [8]: Was Jim Cramer Right About Apple (AAPL)?
+2025-05-04 21:09:47,238 [INFO] Scraped [9]: Was Jim Cramer Right About Costco (COST)?
+2025-05-04 21:09:49,210 [INFO] Scraped [10]: Was Jim Cramer Right About Wingstop (WING)?
+2025-05-04 21:09:51,042 [INFO] Scraped [11]: Stock Futures Fall Ahead of Fed Decision
+2025-05-04 21:09:53,200 [INFO] Scraped [12]: Was Jim Cramer Right About Goldman Sachs Group (GS)?
+2025-05-04 21:09:55,474 [INFO] Scraped [13]: Was Jim Cramer Right About PayPal (PYPL)?
+2025-05-04 21:09:57,799 [INFO] Scraped [14]: Could Autonomous Vehicle Insurance Threaten Berkshire Hathaway's Most Profitable Segment?
+2025-05-04 21:10:00,041 [INFO] Scraped [15]: Freshpet, Inc. (FRPT): The Best Falling Stock to Buy According to Analysts
+2025-05-04 21:10:02,232 [INFO] Scraped [16]: Is Petroleo Brasileiro (PBR) the Best Falling Stock to Buy According to Analysts?
+2025-05-04 21:10:04,981 [INFO] Scraped [17]: Is Schlumberger Limited (SLB) the Best Falling Stock to Buy According to Analysts?
+2025-05-04 21:10:07,483 [INFO] Scraped [18]: Is Nike (NKE) the Best Falling Stock to Buy According to Analysts?
+2025-05-04 21:10:09,724 [INFO] Scraped [19]: Is The AES Corporation (AES) One of the Best Falling Stocks to Buy According to Analysts?
+2025-05-04 21:10:12,119 [INFO] Scraped [20]: Here’s How Much You Should Save Each Month To Retire by 65
+2025-05-04 21:10:14,416 [INFO] Scraped [21]: Becton, Dickinson, and Company (BDX): Among the Best Falling Stocks to Buy According to Analysts
+2025-05-04 21:10:16,959 [INFO] Scraped [22]: Is FedEx Corporation (FDX) One of the Best Falling Stocks to Buy According to Analysts?
+2025-05-04 21:10:22,497 [WARNING] Detail scrape failed for https://finance.yahoo.com/news/thermo-fisher-scientific-tmo-one-215941580.html: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF6D24DA145+76773]
+	GetHandleVerifier [0x00007FF6D24DA1A0+76864]
+	(No symbol) [0x00007FF6D2298F7A]
+	(No symbol) [0x00007FF6D22EF496]
+	(No symbol) [0x00007FF6D22EF74C]
+	(No symbol) [0x00007FF6D2342287]
+	(No symbol) [0x00007FF6D231739F]
+	(No symbol) [0x00007FF6D233F0CF]
+	(No symbol) [0x00007FF6D2317133]
+	(No symbol) [0x00007FF6D22E04D1]
+	(No symbol) [0x00007FF6D22E1263]
+	GetHandleVerifier [0x00007FF6D279A8ED+2962317]
+	GetHandleVerifier [0x00007FF6D2794EC2+2939234]
+	GetHandleVerifier [0x00007FF6D27B2FF3+3062419]
+	GetHandleVerifier [0x00007FF6D24F4B9A+185914]
+	GetHandleVerifier [0x00007FF6D24FC78F+217647]
+	GetHandleVerifier [0x00007FF6D24E2A44+111844]
+	GetHandleVerifier [0x00007FF6D24E2BF2+112274]
+	GetHandleVerifier [0x00007FF6D24C8A79+5401]
+	BaseThreadInitThunk [0x00007FFB3D18E8D7+23]
+	RtlUserThreadStart [0x00007FFB3E4DC5DC+44]
+
+2025-05-04 21:10:22,518 [INFO] Scraped [23]: Is Thermo Fisher Scientific (TMO) One of the Best Falling Stocks to Buy According to Analysts?
+2025-05-04 21:10:24,520 [INFO] Scraped [24]: Is Avantor, Inc. (AVTR) One of the Best Falling Stocks to Buy According to Analysts?
+2025-05-04 21:10:26,518 [INFO] Scraped [25]: Healthpeak Properties, Inc. (DOC): Among the Best Falling Stocks to Buy According to Analysts
+2025-05-04 21:10:28,556 [INFO] Scraped [26]: Delta Air Lines (DAL): Among Unknown Billionaire Phill Gross’ Stock Picks with Huge Upside Potential
+2025-05-04 21:10:30,583 [INFO] Scraped [27]: Advanced Micro Devices (AMD): Among Unknown Billionaire Phill Gross’ Stock Picks with Huge Upside Potential
+2025-05-04 21:10:32,147 [INFO] Scraped [28]: Is Visa Inc. (V) The Best Stock to Buy and Hold For 10 Years?
+2025-05-04 21:10:33,840 [INFO] Scraped [29]: The Walt Disney Company (DIS): Among Unknown Billionaire Phill Gross’ Stock Picks with Huge Upside Potential
+2025-05-04 21:10:35,810 [INFO] Scraped [30]: ConocoPhillips (COP): Among Unknown Billionaire Phill Gross’ Stock Picks with Huge Upside Potential
+2025-05-04 21:10:38,018 [INFO] Scraped [31]: Is Meta Platforms (META) The Best Stock to Buy and Hold For 10 Years?
+2025-05-04 21:10:40,032 [INFO] Scraped [32]: WESCO International (WCC): Among Unknown Billionaire Phill Gross’ Stock Picks with Huge Upside Potential
+2025-05-04 21:10:42,304 [INFO] Scraped [33]: Amazon.com Inc. (AMZN): Among Billionaire Chase Coleman’s Stocks with Huge Upside Potential
+2025-05-04 21:10:44,140 [INFO] Scraped [34]: MercadoLibre, Inc. (MELI): Among the Best Stocks to Buy and Hold For 10 Years
+2025-05-04 21:10:46,042 [INFO] Scraped [35]: Is Intuitive Surgical (ISRG) The Best Stock to Buy and Hold For 10 Years?
+2025-05-04 21:10:47,746 [INFO] Scraped [36]: What Warren Buffett Learned From His Biggest Hits—and Misses
+2025-05-04 21:10:49,809 [INFO] Scraped [37]: Is Novo Nordisk A/S (NVO) The Best Stock to Buy and Hold For 10 Years?
+2025-05-04 21:10:52,072 [INFO] Scraped [38]: Is Shopify Inc. (SHOP) The Best Stock to Buy and Hold For 10 Years?
+2025-05-04 21:10:54,234 [INFO] Scraped [39]: Datadog, Inc. (DDOG): Among Billionaire Chase Coleman’s Stocks with Huge Upside Potential
+2025-05-04 21:10:56,413 [INFO] Scraped [40]: Corcept Therapeutics (CORT): Among Billionaire Jim Simons’ RenTech’s Small-Cap Stock Picks with Huge Upside Potential
+2025-05-04 21:10:58,758 [INFO] Collected 40 total articles
+2025-05-04 21:10:58,759 [INFO] Filtered articles: 38 of 40 kept since 2025-05-04T01:10:58.759367+00:00Z
+2025-05-04 21:10:58,761 [INFO] Saved 38 articles to selenium_yahoo_finance.csv (JSONL)

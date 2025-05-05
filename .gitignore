@@ -1,0 +1,33 @@
+# ─── Python artifacts ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.so
+
+# ─── Virtual env ─────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ─── IDE / editor ────────────────────────────────────────────
+.vscode/
+*.code-workspace
+
+# ─── ChromeDriver binaries (if you don’t want them in Git) ───
+chromedriver.exe                 # IGNORE
+chromedriver-win64/              # IGNORE
+
+# ─── FAISS index & metadata ─────────────────────────────────
+faiss_index/                     # IGNORE entire folder  
+*.faiss                          # IGNORE index files  
+faiss_meta.pkl                   # IGNORE serialized metadata
+
+# ─── Scraped data & logs ────────────────────────────────────
+*.csv                            # IGNORE scraped CSV  
+*.jsonl                          # IGNORE JSON-L output  
+scrape.log                       # IGNORE runtime log  
+
+# ─── Miscellaneous ──────────────────────────────────────────
+yahoo_finance.csv                # IGNORE if this is an output  
+selenium_yahoo_finance.json      # IGNORE if this is an output  
+selenium_yahoo_finance.jsonl     # IGNORE if this is an output  
+testfile.py                      # IGNORE local experiments  

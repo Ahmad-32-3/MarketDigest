@@ -1,5 +1,3 @@
-# dashboard.py
-
 import streamlit as st
 st.set_page_config(page_title="24h Stock News Sentiment", layout="wide")
 
@@ -15,38 +13,23 @@ from rag import answer_query
 # 1) LOAD & CLASSIFY DATA
 # ────────────────────────────────────────────────────────────
 @st.cache_data
-def load_and_classify(path: str = "selenium_yahoo_finance.jsonl") -> pd.DataFrame:
-    df = pd.read_json(path, lines=True)
+def load_classification(path: str = "sentiment.csv") -> pd.DataFrame:
+    return pd.read_csv(path)
 
-    def classify(row) -> str:
-        low = row.title.lower()
-        # force positive if “Best ... to Buy” appears
-        if "best" in low and "to buy" in low:
-            return "positive"
-        # otherwise use your pos/neg counts
-        if row.pos_count > row.neg_count:
-            return "positive"
-        elif row.neg_count > row.pos_count:
-            return "negative"
-        else:
-            return "neutral"
+df = load_classification()
 
-    df["sentiment"] = df.apply(classify, axis=1)
-    return df
-
-df = load_and_classify()
 
 # ────────────────────────────────────────────────────────────
 # 2) DASHBOARD LAYOUT
 # ────────────────────────────────────────────────────────────
 st.title("24h Stock News Sentiment Dashboard")
-st.markdown("Positive vs Negative stories from the last 24h")
+st.markdown("Best to Buy vs Best to Avoid stories from the last 24h")
 
 col1, col2 = st.columns(2)
 
 with col1:
     st.header("🟢 Best to Buy")
-    pos_df = df[df.sentiment == "positive"]
+    pos_df = df[df.classification == "best_to_buy"]
     if pos_df.empty:
         st.write("No positive stories right now.")
     else:
@@ -57,8 +40,8 @@ with col1:
                 st.write(text)
 
 with col2:
-    st.header("🔴 Probably should sell")
-    neg_df = df[df.sentiment == "negative"]
+    st.header("🔴 Best to Avoid")
+    neg_df = df[df.classification == "best_to_avoid"]
     if neg_df.empty:
         st.write("No negative stories right now.")
     else:

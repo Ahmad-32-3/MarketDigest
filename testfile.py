@@ -63,7 +63,7 @@ print(f"Loaded {len(docs)} articles (post-cutoff).", file=sys.stderr)
 
 emb = LocalEmbeddings()
 texts = [d["content"] for d in docs]
-vectors = emb.embed_documents(texts)   # shape (n_docs, dim)
+vectors = emb.embed_documents(texts)   
 
 dim   = vectors.shape[1]
 index = IndexFlatL2(dim)

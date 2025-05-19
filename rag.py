@@ -1,6 +1,7 @@
 # rag.py
 
 import pickle
+import re
 from typing import List, Dict, Any, Tuple
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -52,11 +53,20 @@ def _get_qa_pipe():
 # 3) Public function
 # ────────────────────────────────────────────────────────────
 
+
+def trim_to_sentence(text: str) -> str:
+    # Find the last end-of-sentence punctuation in the text
+    matches = list(re.finditer(r'[.!?]', text))
+    if matches:
+        last_punct = matches[-1].end()
+        return text[:last_punct].strip()
+    return text.strip()  
+
 def answer_query(query: str) -> Tuple[str, List[Dict[str, Any]]]:
     """
     1) retrieve top-k articles
     2) build prompt from titles+content
-    3) generate answer with FLAN-T5
+    3) generate answer with FLAN-T5, trim to last complete sentence
     """
     global _qa_pipe
     if _qa_pipe is None:
@@ -67,11 +77,18 @@ def answer_query(query: str) -> Tuple[str, List[Dict[str, Any]]]:
                           for i, d in enumerate(docs))
 
     prompt = (
-        "Answer ONLY from these snippets:\n\n"
-        f"{context}\n\nQuestion: {query}\nAnswer:"
+        "Based ONLY on the following article snippets, answer the question below. "
+        "Do not use any outside knowledge. If the answer is not found in the snippets, respond: 'Not found in the provided articles.'\n\n"
+        f"{context}\n\n"
+        f"Question: {query}\n"
+        "Answer in 2-3 complete sentences. Cite the snippet number(s) you used if possible.\n"
+        "Answer:"
     )
 
-    out = _qa_pipe(prompt, max_length=200, truncation=True, do_sample=False)
+    out = _qa_pipe(prompt, max_length=250, truncation=True, do_sample=False)
     answer = out[0]["generated_text"].strip()
+    answer = trim_to_sentence(answer)  # <--- NEW: trim at last sentence-ending punctuation
+
     sources = [d.metadata for d in docs]
     return answer, sources
+

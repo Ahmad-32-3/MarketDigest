@@ -120,9 +120,8 @@ def main(args):
             title   = el.find_element(By.CSS_SELECTOR, 'h3').text.strip()
             url     = el.find_element(By.CSS_SELECTOR, 'a').get_attribute('href')
             summary = el.find_element(By.CSS_SELECTOR, 'p').text.strip() if el.find_elements(By.CSS_SELECTOR, 'p') else ""
-            timestamp, content_full = (None, "")
-            if args.timestamp:
-                timestamp, content_full = extract_detail(driver, url)
+            timestamp, content_full = extract_detail(driver, url)
+
 
             # Unique stable ID from URL
             uid = hashlib.sha1(url.encode('utf-8')).hexdigest()

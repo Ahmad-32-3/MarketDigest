@@ -24,7 +24,7 @@ def main():
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     db = FAISS.from_documents(docs, embeddings)
 
-    # 3) Persist your FAISS index
+    # 3) Saerch for similar multimedia documents
     db.save_local("faiss_index")
     print(f"Indexed {len(docs)} docs into faiss_index")
 
